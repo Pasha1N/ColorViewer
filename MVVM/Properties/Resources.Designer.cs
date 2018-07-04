@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MVVM.Properties
+namespace MVVM.Views.Properties
 {
 
 
