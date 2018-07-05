@@ -14,7 +14,7 @@ namespace MVVM.Views
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    internal sealed partial class MainWindow : Window
+    public sealed partial class MainWindow : Window
     {
         public MainWindow(MainWindowViewModel mainWindowViewModel)
         {

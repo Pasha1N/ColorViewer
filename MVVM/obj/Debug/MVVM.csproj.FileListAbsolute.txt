@@ -1,0 +1,30 @@
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\bin\Debug\MVVM.exe.config
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\bin\Debug\MVVM.exe
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\bin\Debug\MVVM.pdb
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MVVM.csprojResolveAssemblyReference.cache
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MainWindow.g.cs
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\App.g.cs
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MVVM_MarkupCompile.cache
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MVVM_MarkupCompile.lref
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MainWindow.baml
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MVVM.g.resources
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MVVM.Properties.Resources.resources
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MVVM.csproj.GenerateResource.Cache
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MVVM.csproj.CoreCompileInputs.cache
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MVVM.exe
+C:\Users\nejk_4neo\Desktop\MVVM\MVVM\obj\Debug\MVVM.pdb
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\bin\Debug\MVVM.exe.config
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\bin\Debug\MVVM.exe
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\bin\Debug\MVVM.pdb
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\MVVM.csprojAssemblyReference.cache
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\App.g.cs
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\MVVM_MarkupCompile.cache
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\MVVM_MarkupCompile.lref
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\MVVM.g.resources
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\MVVM.Properties.Resources.resources
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\MVVM.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\MVVM.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\MVVM.exe
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\MVVM.pdb
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\Views\MainWindow.g.cs
+C:\Users\User\Desktop\Pasha computer\Паша\WPF\Homework\MVVM\MVVM\obj\Debug\Views\MainWindow.baml

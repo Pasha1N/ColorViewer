@@ -5,9 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MVVM"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-
-    <!-- <Grid>
+        Title="MainWindow" MinWidth="300" MinHeight="250"  Height="350" Width="525">
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="508*"/>
@@ -47,31 +46,31 @@
             <TextBlock Grid.Row="2" Text="Green:" Margin="0,5,0,5" HorizontalAlignment="Right" Width="34" Grid.Column="1"/>
             <TextBlock Grid.Row="3" Text="Blue:" Margin="0,5,0,5" HorizontalAlignment="Right" Width="25" Grid.Column="1"/>
 
-            <TextBlock  Grid.Column="2" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="19,5" Height="16" Width="7"/>
+            <TextBlock  Grid.Column="2" Text="{Binding Path=ColorR}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="19,5" Height="16" Width="7"/>
             <TextBlock  Grid.Row="1" Grid.Column="2"  Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="19,5" Height="16" Width="7"/>
             <TextBlock  Grid.Row="2" Grid.Column="2"  Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="19,5" Height="16" Width="7"/>
             <TextBlock  Grid.Row="3" Grid.Column="2"  Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="19,5" Height="16" Width="7"/>
 
-            <Slider Grid.Column="3" Margin="0,2,0,0"/>
+            <Slider Grid.Column="3" Value="{Binding Path=ColorR,UpdateSourceTrigger=PropertyChanged}" Margin="0,2,0,0" Maximum="255" Minimum="0"/>
             <Slider Grid.Column="3" Grid.Row="1"  Margin="0,2,0,0"/>
             <Slider Grid.Column="3" Grid.Row="2"  Margin="0,2,0,0"/>
             <Slider Grid.Column="3" Grid.Row="3"  Margin="0,2,0,0"/>
 
-            <Border Grid.Column="4" Grid.RowSpan="4">
+            <Border Grid.Column="4" Grid.RowSpan="4" HorizontalAlignment="Left" Width="35">
                 <Border.Background>
-                    <SolidColorBrush Color="Green"/>
+                    <SolidColorBrush Color="#FF58E453"/>
                 </Border.Background>
             </Border>
         </Grid>
-        
+
         <Grid Grid.Column="1" Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80"/>
             </Grid.ColumnDefinitions>
             <Button Grid.Column="1" Grid.Row="1">Add</Button>
         </Grid>
-        
+
         <ListBox Grid.Row="2" Grid.Column="1"/>
 
-    </Grid>-->
+    </Grid>
 </Window>
