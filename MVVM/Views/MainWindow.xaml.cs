@@ -19,8 +19,9 @@ namespace MVVM.Views
         public MainWindow(MainWindowViewModel mainWindowViewModel)
         {
             InitializeComponent();
-
+          
             DataContext = mainWindowViewModel;
+           
         }
     }
 }
