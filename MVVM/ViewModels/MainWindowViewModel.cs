@@ -13,8 +13,13 @@ namespace MVVM.ViewModels
 
         public int ColorR
         {
-            set { valueTypeColorR = value; }
             get => valueTypeColorR;
+            set
+            {
+                valueTypeColorR = value;
+                OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorR)));
+            }
+         
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -23,6 +28,5 @@ namespace MVVM.ViewModels
         {
             PropertyChanged?.Invoke(this, e);
         }
-
     }
 }
