@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" MinWidth="300" MinHeight="250"  Height="350" Width="525">
     <Grid>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*"/>
             <ColumnDefinition Width="508*"/>
@@ -56,7 +57,7 @@
             <Slider Grid.Column="3" Value="{Binding Path=ColorG,UpdateSourceTrigger=PropertyChanged}" Grid.Row="2"  Margin="0,2,0,0" Maximum="255" Minimum="0"/>
             <Slider Grid.Column="3" Value="{Binding Path=ColorB,UpdateSourceTrigger=PropertyChanged}" Grid.Row="3"  Margin="0,2,0,0" Maximum="255" Minimum="0"/>
 
-            <Border Grid.Column="4" Grid.RowSpan="4" HorizontalAlignment="Left" Width="35" Background="#FF001" />
+            <Border Grid.Column="4" Grid.RowSpan="4" HorizontalAlignment="Left" Width="35" Background="{Binding Path=ColorCode,UpdateSourceTrigger=PropertyChanged}"  />
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="1" >
@@ -66,7 +67,23 @@
             <Button Grid.Column="1" Grid.Row="1">Add</Button>
         </Grid>
 
-        <ListBox Grid.Row="2" Grid.Column="1"/>
+        <ListBox x:Name="colors" Grid.Row="2" Grid.Column="1">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <TextBlock />
+                        <Border Grid.Column="1" Background="{Binding Path=ColorCode,UpdateSourceTrigger=PropertyChanged}" />
+                        <Button Grid.Column="2" Content="Delete"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
 
     </Grid>
 </Window>

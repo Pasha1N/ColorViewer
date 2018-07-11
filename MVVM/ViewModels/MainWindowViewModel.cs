@@ -4,64 +4,85 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace MVVM.ViewModels
 {
-   public class MainWindowViewModel: INotifyPropertyChanged     
+    public class MainWindowViewModel : INotifyPropertyChanged
     {
-        private int colorA =0;
-        private int colorR = 0;
-        private int colorG = 0;
-        private int colorB = 0;
+        private byte colorA = 0;
+        private byte colorR = 0;
+        private byte colorG = 0;
+        private byte colorB = 0;
         private string colorCode = string.Empty;
 
 
-        public int ColorA
+        public byte ColorA
         {
-            get => colorA ;
+            get => colorA;
             set
             {
-                colorA  = value;
-                OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorA)));
-                ConvertingToHexadecimalSystem();
+                if (!colorA.Equals(value))
+                {
+                    colorA = value;
+                    OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorA)));
+                    ConvertingToHexadecimalSystem();
+                }
             }
         }
 
-       public string ColorCode
+        public string ColorCode
         {
             get => colorCode;
-        }
-
-        public int ColorR
-        {
-            get => colorR ;
             set
             {
-                colorR  = value;
-                OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorR)));
-                ConvertingToHexadecimalSystem();
+                if (!colorCode.Equals(value))
+                {
+                    colorCode = value;
+                    OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorCode)));
+                }
             }
         }
 
-        public int ColorG
+        public byte ColorR
+        {
+            get => colorR;
+            set
+            {
+                if (!colorR.Equals(value))
+                {
+                    colorR = value;
+                    OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorR)));
+                    ConvertingToHexadecimalSystem();
+                }
+            }
+        }
+
+        public byte ColorG
         {
             get => colorG;
             set
             {
-                colorG = value;
-                OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorG)));
-                ConvertingToHexadecimalSystem();
+                if (!colorG.Equals(value))
+                {
+                    colorG = value;
+                    OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorG)));
+                    ConvertingToHexadecimalSystem();
+                }
             }
         }
 
-        public int ColorB
+        public byte ColorB
         {
             get => colorB;
             set
             {
-                colorB = value;
-                OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorB)));
-                ConvertingToHexadecimalSystem();
+                if (!colorB.Equals(value))
+                {
+                    colorB = value;
+                    OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorB)));
+                    ConvertingToHexadecimalSystem();
+                }
             }
         }
 
@@ -74,13 +95,10 @@ namespace MVVM.ViewModels
 
         public void ConvertingToHexadecimalSystem()
         {
-            string code = Convert.ToString(255, 16);
-            code = string.Concat(code,Convert.ToString(colorR, 16));
-            code = string.Concat(code,Convert.ToString(colorG, 16));
-            code = string.Concat(code,Convert.ToString(colorB, 16));
-            colorCode = code;
-            OnPropertyChanced(new PropertyChangedEventArgs(nameof(colorCode)));
+            ColorCode = Color.FromArgb(colorA, colorR, colorG, colorB).ToString();
         }
+
+
 
     }
 }

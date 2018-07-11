@@ -21,7 +21,7 @@ namespace MVVM.Views
             InitializeComponent();
           
             DataContext = mainWindowViewModel;
-           
+            colors.Items.Add("safsdfs");
         }
     }
 }
