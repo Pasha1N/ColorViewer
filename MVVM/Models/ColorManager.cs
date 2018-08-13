@@ -6,11 +6,10 @@ namespace ColorViewer.Models
     public class ColorManager
     {
         private ICollection<Color> colors = new List<Color>();
-
-        public IEnumerable<Color> Colors => colors;
-
         public event EventHandler<ColorEventArgs> colorAdded;
         public event EventHandler<ColorEventArgs> colorDeleted;
+
+        public IEnumerable<Color> Colors => colors;
 
         private void OnColorAdded(ColorEventArgs e)
         {
