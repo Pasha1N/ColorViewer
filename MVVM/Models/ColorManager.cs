@@ -12,12 +12,12 @@ namespace ColorViewer.Models
         public event EventHandler<ColorEventArgs> colorAdded;
         public event EventHandler<ColorEventArgs> colorDeleted;
 
-        public void OnColorAdded(ColorEventArgs e)
+        private void OnColorAdded(ColorEventArgs e)
         {
             colorAdded?.Invoke(this, e);
         }
 
-        public void OnColorDeleted(ColorEventArgs e)
+        private void OnColorDeleted(ColorEventArgs e)
         {
             colorDeleted?.Invoke(this, e);
         }
