@@ -10,12 +10,12 @@ namespace ColorViewer.ViewModels
     {
         private Command addCommand;
         private bool canAdd = true;
-        private byte colorA = 0;
-        private byte colorB = 0;
+        private byte colorA;
+        private byte colorB;
         private string colorCode = string.Empty;
-        private byte colorG = 0;
+        private byte colorG;
         private ColorManager colorManager;
-        private byte colorR = 0;
+        private byte colorR;
         private ICollection<ColorViewModel> colors = new ObservableCollection<ColorViewModel>();
         private ViewModelFactory modelFactory;
 
