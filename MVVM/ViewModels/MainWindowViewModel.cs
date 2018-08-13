@@ -45,6 +45,7 @@ namespace ColorViewer.ViewModels
                 }
             };
 
+            //для colorA то есть для "alpha" устанавливается максимальное значение!
             colorA = 255;
             ConvertingToHexadecimalSystem();
             OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorCode)));
