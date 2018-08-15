@@ -158,6 +158,11 @@ namespace ColorViewer.ViewModels
                 foreach (ColorViewModel color in colors)
                 {
                     canAdd = ColorCode != color.ColorCode;
+
+                    if(!canAdd)
+                    {
+                        break;
+                    }
                 }
             }
             else
