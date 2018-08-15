@@ -9,8 +9,8 @@ namespace ColorViewer.Models
 
         public IEnumerable<Color> Colors => colors;
 
-        public event EventHandler<ColorEventArgs> colorAdded;
-        public event EventHandler<ColorEventArgs> colorDeleted;
+        public event EventHandler<ColorEventArgs> ColorAdded;
+        public event EventHandler<ColorEventArgs> ColorDeleted;
 
         public void AddColor(Color color)
         {
@@ -28,12 +28,12 @@ namespace ColorViewer.Models
 
         private void OnColorAdded(ColorEventArgs e)
         {
-            colorAdded?.Invoke(this, e);
+            ColorAdded?.Invoke(this, e);
         }
 
         private void OnColorDeleted(ColorEventArgs e)
         {
-            colorDeleted?.Invoke(this, e);
+            ColorDeleted?.Invoke(this, e);
         }
     }
 }

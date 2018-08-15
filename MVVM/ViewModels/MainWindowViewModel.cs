@@ -25,7 +25,7 @@ namespace ColorViewer.ViewModels
             this.colorManager = colorManager;
             modelFactory = viewModelFactory;
 
-            colorManager.colorAdded += (sender, e) =>
+            colorManager.ColorAdded += (sender, e) =>
             {
                 ColorViewModel color = modelFactory.CreateColorViewModel(e.Color);
                 colors.Add(color);
@@ -33,7 +33,7 @@ namespace ColorViewer.ViewModels
 
             };
 
-            colorManager.colorDeleted += (sender, e) =>
+            colorManager.ColorDeleted += (sender, e) =>
             {
                 foreach (ColorViewModel color in colors)
                 {
