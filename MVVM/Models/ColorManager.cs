@@ -11,16 +11,6 @@ namespace ColorViewer.Models
 
         public IEnumerable<Color> Colors => colors;
 
-        private void OnColorAdded(ColorEventArgs e)
-        {
-            colorAdded?.Invoke(this, e);
-        }
-
-        private void OnColorDeleted(ColorEventArgs e)
-        {
-            colorDeleted?.Invoke(this, e);
-        }
-
         public void AddColor(Color color)
         {
             colors.Add(color);
@@ -33,6 +23,16 @@ namespace ColorViewer.Models
             {
                 OnColorDeleted(new ColorEventArgs(color));
             }
+        }
+
+        private void OnColorAdded(ColorEventArgs e)
+        {
+            colorAdded?.Invoke(this, e);
+        }
+
+        private void OnColorDeleted(ColorEventArgs e)
+        {
+            colorDeleted?.Invoke(this, e);
         }
     }
 }
