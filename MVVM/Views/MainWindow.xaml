@@ -88,7 +88,7 @@
                                 <ColumnDefinition />
                                 <ColumnDefinition Width="80" />
                             </Grid.ColumnDefinitions>
-                            <TextBlock Text="#FFB0B0EC" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="3,0,2,0" />
+                            <TextBlock Text="{Binding Path=ColorCode}" HorizontalAlignment="Left"  VerticalAlignment="Center" Margin="3,0,2,0" />
                             <Border Grid.Column="1" Background="{Binding Path=ColorCode}"  Margin="3,0,6,0" />
                             <Button Grid.Column="2" Content="Delete" Command="{Binding Path=DeleteCommand}" />
                         </Grid>

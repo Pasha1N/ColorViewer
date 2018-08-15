@@ -90,8 +90,8 @@ namespace ColorViewer.ViewModels
                 if (!colorCode.Equals(value))
                 {
                     colorCode = value;
-                    OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorCode)));
                     UpdateAdditionStatus();
+                    OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorCode)));
                 }
             }
         }
