@@ -9,7 +9,7 @@ namespace ColorViewer
 
         public virtual bool CanExecute()
         {
-            return true;
+            return false;
         }
 
         bool ICommand.CanExecute(object parameter)

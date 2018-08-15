@@ -75,10 +75,9 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="80"/>
             </Grid.ColumnDefinitions>
-            <Button Grid.Column="1" Grid.Row="1" Command="{Binding Path=AddCommand}"
-            IsEnabled="{Binding Path=CanAdd,UpdateSourceTrigger=PropertyChanged}" Content="Add" />
+            <Button Grid.Column="1" Grid.Row="1" Command="{Binding Path=AddCommand}" Content="Add" />
         </Grid>
-
+      
         <Grid Grid.Row="2" Grid.Column="1" Margin="0,5,0,5">
             <ListBox x:Name="colors"  HorizontalContentAlignment="Stretch" ItemsSource="{Binding Path=Colors }">
                 <ListBox.ItemTemplate>

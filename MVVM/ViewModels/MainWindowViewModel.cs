@@ -21,7 +21,7 @@ namespace ColorViewer.ViewModels
 
         public MainWindowViewModel(ColorManager colorManager, ViewModelFactory viewModelFactory)
         {
-            addCommand = new DelegateCommand(Add);
+            addCommand = new DelegateCommand(Add, CanAdd);
             this.colorManager = colorManager;
             modelFactory = viewModelFactory;
 
@@ -30,6 +30,7 @@ namespace ColorViewer.ViewModels
                 ColorViewModel color = modelFactory.CreateColorViewModel(e.Color);
                 colors.Add(color);
                 UpdateAdditionStatus();
+
             };
 
             colorManager.colorDeleted += (sender, e) =>
@@ -52,16 +53,6 @@ namespace ColorViewer.ViewModels
         }
 
         public ICommand AddCommand => addCommand;
-
-        public bool CanAdd
-        {
-            get => canAdd;
-            set
-            {
-                canAdd = value;
-                OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorCode)));
-            }
-        }
 
         public byte ColorA
         {
@@ -98,7 +89,6 @@ namespace ColorViewer.ViewModels
             {
                 if (!colorCode.Equals(value))
                 {
-                    CanAdd = true;
                     colorCode = value;
                     OnPropertyChanced(new PropertyChangedEventArgs(nameof(ColorCode)));
                     UpdateAdditionStatus();
@@ -146,11 +136,14 @@ namespace ColorViewer.ViewModels
         public void Add()
         {
             Models.Color color = new Models.Color(colorCode);
+            colorManager.AddColor(color);
+            UpdateAdditionStatus();
+            addCommand.RaiseCanExecuteChanged();
+        }
 
-            if (CanAdd)
-            {
-                colorManager.AddColor(color);
-            }
+        public bool CanAdd()
+        {
+            return canAdd;
         }
 
         public void ConvertingToHexadecimalSystem()
@@ -164,15 +157,15 @@ namespace ColorViewer.ViewModels
             {
                 foreach (ColorViewModel color in colors)
                 {
-                    CanAdd = ColorCode != color.ColorCode;
+                    canAdd = ColorCode != color.ColorCode;
                 }
             }
             else
             {
-                CanAdd = true;
+                canAdd = true;
             }
 
-            OnPropertyChanced(new PropertyChangedEventArgs(nameof(CanAdd)));
+            addCommand.RaiseCanExecuteChanged();
         }
     }
 }
